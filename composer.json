@@ -8,9 +8,9 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-		"laravel/framework": "4.2.*",
-		"artdarek/oauth-4-laravel": "dev-master"	
+        "php": ">=5.4",
+		"laravel/framework": ">=4.2",
+		"artdarek/oauth-4-laravel": ">=1"	
     },	
     "autoload": {
         "classmap": [
