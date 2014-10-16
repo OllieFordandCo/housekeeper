@@ -9,8 +9,10 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
-    },
+        "illuminate/support": "4.2.*",
+		"laravel/framework": "4.2.*",
+		"artdarek/oauth-4-laravel": "dev-master",		
+    },	
     "autoload": {
         "classmap": [
             "src/migrations",
