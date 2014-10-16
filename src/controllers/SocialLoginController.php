@@ -66,10 +66,10 @@ class SocialLoginController extends Controller {
 				));
 				
 				// Find the group using the group id
-				$adminGroup = \Sentry::findGroupById(2);
+				$guestGroup = \Sentry::findGroupById(2);
 				
 				// Assign the group to the user
-				$user->addGroup($adminGroup);
+				$user->addGroup($guestGroup);
 				
 				\Sentry::login($user, false);					
 				\Session::put('ollieford.user.provider', 'twitter');
@@ -145,6 +145,12 @@ class SocialLoginController extends Controller {
 					'password'  => md5('TemporalPassword'),
 					'activated' => true,
 				));
+
+				// Find the group using the group id
+				$guestGroup = \Sentry::findGroupById(2);
+				
+				// Assign the group to the user
+				$user->addGroup($guestGroup);
 				
 				\Sentry::login($user, false);
 				\Session::put('ollieford.user.provider', 'facebook');
@@ -223,10 +229,10 @@ class SocialLoginController extends Controller {
 				));
 				
 				// Find the group using the group id
-				$adminGroup = \Sentry::findGroupById(2);
+				$guestGroup = \Sentry::findGroupById(2);
 				
 				// Assign the group to the user
-				$user->addGroup($adminGroup);
+				$user->addGroup($guestGroup);
 				
 				\Sentry::login($user, false);
 				\Session::put('ollieford.user.provider', 'freshbooks');
