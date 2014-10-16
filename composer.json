@@ -1,0 +1,24 @@
+{
+    "name": "ollie-fordand-co/social",
+    "description": "Social Package for Laravel",
+    "authors": [
+        {
+            "name": "Ollie Ford & Co",
+            "email": "hello@ollieford.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+			"src/controllers"
+        ],
+        "psr-0": {
+            "OllieFordandCo\\Social\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
