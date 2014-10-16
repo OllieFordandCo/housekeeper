@@ -1,8 +1,8 @@
-<?php namespace OllieFordandCo\Social;
+<?php namespace OllieFordandCo\SocialLogin;
 
 use Illuminate\Support\ServiceProvider;
 
-class SocialServiceProvider extends ServiceProvider {
+class SocialLoginServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -18,7 +18,8 @@ class SocialServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('ollie-fordand-co/social');
+		$this->package('ollie-fordand-co/social-login');
+		include __DIR__.'/../../routes.php';		
 	}
 
 	/**
@@ -28,7 +29,10 @@ class SocialServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+        $this->app['social-login'] = $this->app->share(function($app)
+        {
+            return new SocialLogin;
+        });
 	}
 
 	/**
@@ -38,7 +42,7 @@ class SocialServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('social-login');
 	}
 
 }

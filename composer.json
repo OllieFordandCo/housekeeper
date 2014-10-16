@@ -1,6 +1,6 @@
 {
-    "name": "olliefordandco/social",
-    "description": "Social Package for Laravel",
+    "name": "olliefordandco/social-login",
+    "description": "Social Login Package for Laravel",
     "authors": [
         {
             "name": "Ollie Ford & Co",
@@ -18,7 +18,7 @@
             "src/controllers"
         ],
         "psr-0": {
-            "OllieFordandCo\\Social\\": "src/"
+            "OllieFordandCo\\Social-Login\\": "src/"
         }
     },
     "minimum-stability": "dev"
