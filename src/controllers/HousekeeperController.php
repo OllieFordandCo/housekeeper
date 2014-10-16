@@ -3,7 +3,6 @@
 use \Artdarek\OAuth\Facade\OAuth;
 use \Illuminate\Routing\Controller;
 use \Illuminate\Support\Facades\Input;
-use \Illuminate\Routing\Controller;
 
 class HousekeeperController extends Controller {
 
