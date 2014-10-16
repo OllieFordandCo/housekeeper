@@ -1,11 +1,11 @@
-<?php namespace OllieFordandCo\SocialLogin;
+<?php namespace OllieFordandCo\Housekeeper;
 
 use \Artdarek\OAuth\Facade\OAuth;
 use \Illuminate\Routing\Controller;
 use \Illuminate\Support\Facades\Input;
 use \Illuminate\Routing\Controller;
 
-class SocialLoginController extends Controller {
+class HousekeeperController extends Controller {
 
 	/**
 	 * Twitter Gateway
@@ -20,7 +20,7 @@ class SocialLoginController extends Controller {
 	$oauth_verifier = Input::get( 'oauth_verifier' );
 	\Session::push('ollieford.user', 'provider');	
 	// Instantiate the twitter service using the credentials, http client and storage mechanism for the token
-	$twitterService = \OAuth::consumer( 'Twitter',  'http://intranet.ollieford.com/login/twitter');
+	$twitterService = \OAuth::consumer( 'Twitter',  'http://beta.ollieford.com/login/twitter');
 	
 		if (!empty($code)) {
 			$token = $twitterService->getStorage()->retrieveAccessToken('Twitter');

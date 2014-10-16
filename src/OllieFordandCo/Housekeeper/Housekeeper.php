@@ -1,7 +1,7 @@
-<?php namespace OllieFordandCo\SocialLogin;
+<?php namespace OllieFordandCo\Housekeeper;
 
 
-class SocialLogin 
+class Housekeeper 
 {
 
 	public function getCurrentUser() {

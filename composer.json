@@ -1,5 +1,5 @@
 {
-    "name": "olliefordandco/social-login",
+    "name": "olliefordandco/housekeeper",
     "description": "Social Login Package for Laravel",
     "authors": [
         {
@@ -18,7 +18,7 @@
             "src/controllers"
         ],
         "psr-0": {
-            "OllieFordandCo\\Social-Login\\": "src/"
+            "OllieFordandCo\\Housekeeper\\": "src/"
         }
     },
     "minimum-stability": "dev"

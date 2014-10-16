@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('login/twitter', array('as' => 'social-login-twitter', 'uses' => 'OllieFordandCo\Social-Login\SocialLoginController@loginwithTwitter'));
-Route::get('login/facebook', array('as' => 'social-login-facebook', 'uses' => 'OllieFordandCo\Social-Login\SocialLoginController@loginwithFacebook'));
-Route::get('login/freshbooks', array('as' => 'social-login-freshbooks', 'uses' => 'OllieFordandCo\Social-Login\SocialLoginController@loginwithFreshbooks'));
+Route::get('login/twitter', array('as' => 'housekeeper-twitter', 'uses' => 'OllieFordandCo\Social-Login\SocialLoginController@loginwithTwitter'));
+Route::get('login/facebook', array('as' => 'housekeeper-facebook', 'uses' => 'OllieFordandCo\Social-Login\SocialLoginController@loginwithFacebook'));
+Route::get('login/freshbooks', array('as' => 'housekeeper-freshbooks', 'uses' => 'OllieFordandCo\Social-Login\SocialLoginController@loginwithFreshbooks'));

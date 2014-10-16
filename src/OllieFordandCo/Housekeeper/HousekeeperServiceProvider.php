@@ -1,8 +1,8 @@
-<?php namespace OllieFordandCo\SocialLogin;
+<?php namespace OllieFordandCo\Housekeeper;
 
 use Illuminate\Support\ServiceProvider;
 
-class SocialLoginServiceProvider extends ServiceProvider {
+class HousekeeperServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -18,7 +18,7 @@ class SocialLoginServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('ollie-fordand-co/social-login');
+		$this->package('ollie-fordand-co/housekeeper');
 		include __DIR__.'/../../routes.php';		
 	}
 
@@ -29,9 +29,9 @@ class SocialLoginServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-        $this->app['social-login'] = $this->app->share(function($app)
+        $this->app['housekeeper'] = $this->app->share(function($app)
         {
-            return new SocialLogin;
+            return new Housekeeper;
         });
 	}
 
@@ -42,7 +42,7 @@ class SocialLoginServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('social-login');
+		return array('housekeeper');
 	}
 
 }
