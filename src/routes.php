@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('login/twitter', array('as' => 'housekeeper-twitter', 'uses' => 'OllieFordandCo\Housekeeper\HousekeeperController@loginwithTwitter'));
-Route::get('login/facebook', array('as' => 'housekeeper-facebook', 'uses' => 'OllieFordandCo\Housekeeper\HousekeeperController@loginwithFacebook'));
-Route::get('login/freshbooks', array('as' => 'housekeeper-freshbooks', 'uses' => 'OllieFordandCo\Housekeeper\HousekeeperController@loginwithFreshbooks'));
+Route::get('login/{provider}', array('as' => 'login_with', 'uses' => 'OllieFordandCo\Housekeeper\HousekeeperController@loginWith'));
