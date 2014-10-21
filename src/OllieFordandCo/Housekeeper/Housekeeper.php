@@ -124,8 +124,8 @@ class Housekeeper
 		if(!empty($user_data['email'])) {
 			// Create the user
 			$user = \Sentry::createUser($user_data);			
-			return $user;
 		}	
+		return $user;		
 	}
 
 	public static function get_user($user_email) {

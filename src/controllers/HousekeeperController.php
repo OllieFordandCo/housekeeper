@@ -34,7 +34,7 @@ class HousekeeperController extends Controller {
 
 			if (!$user) {
 				
-				Housekeeper::create_social_user($user_data);				
+				$user = Housekeeper::create_social_user($user_data);				
 	
 			} 
 
